@@ -9,30 +9,45 @@
 <body>
     <div class="register">
         <h1>Register</h1>
-        <div class="register__wrapper">
-            <input type="text" placeholder="Username">
-            <p>Username is required </p>
-            <div class="register__line"></div>
+        <form action="/submit" id="register__form">
+          <div class="register__wrapper">
+            <input type="text" class="register__form__username" placeholder="Username" required>
+            <div class="register__line--gray"></div>
+            <div class="register__line--blue"></div>
+            <div class="register__line--red">
+              <p>Username is required </p>
+            </div>
         </div>
           <div class="register__wrapper">
-            <input type="text" placeholder="Email">
-            <p>Email is required </p>
-            <div class="register__line"></div>
+            <input type="email" class="register__form__email" placeholder="Email" required>
+            <div class="register__line--gray"></div>
+            <div class="register__line--blue"></div>
+            <div class="register__line--red">
+              <p>Email is required </p>
+            </div>
         </div>
           <div class="register__wrapper">
-            <input type="text" placeholder="Password">
-            <p>Password is required </p>
-            <div class="register__line"></div>
+            <input type="password" class="register__form__password" placeholder="Password" required>
+            <div class="register__line--gray"></div>
+            <div class="register__line--blue"></div>
+            <div class="register__line--red">
+              <p>Password is required </p>
+            </div>
         </div>
         <div class="register__wrapper">
-          <input type="text" placeholder="Confirm password">
-          <p>Password2 is required</p>
-          <div class="register__line"></div>
-        </div>
-        <button class="register__btn">Login</button>
+          <input type="password" class="register__form__repassword" placeholder="Confirm password" required>
+          <div class="register__line--gray"></div>
+          <div class="register__line--blue"></div>
+            <div class="register__line--red">
+              <p>Password2 is required</p>
+            </div>
+          </div>
+        <button class="register__submit" type="submit"  > Login</button>
         <div class="register__signup">
           <p>Not a member <a href="">Signup</a></p>
-        </div>
+        </div>  
+        </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
