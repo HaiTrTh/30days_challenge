@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --successs-color: rgb(0, 128, 0);
+  --warnings-color: rgb(255, 165, 0);
+  --errors-color: rgb(255, 0, 0);
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn--success{
+  background-color: var(--successs-color)
+}
+.btn--warning{
+  background-color: var(--warnings-color)
+}
+.btn--error{
+  background-color: var(--errors-color)
+}
+.main{
+  position: fixed;
+  top: 32px;
+  right: 32px;
+}
+
+.toast{
+  margin-bottom: 12px;
+  color: white;
+  padding: 24px 40px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: translateX(calc(1010% + 32px));
+  animation: slideIn 1s ease-in forwards, slideOut 1s 3s ease-in forwards;
+  display: flex;
+  align-items: center;
+  justify-self: space-between;
+}
+.toast i{ 
+
+}
+.toast h5{
+  margin-left: 12px;
+}
+
+.toast.toast--success{
+  border-left: 4px solid var(--successs-color);
+ 
+  background-color: rgba(0, 128, 0, 0.4);
+}
+.toast.toast--warning{
+  border-left: 4px solid var(--warnings-color);
+ 
+  background-color: rgba(255, 165, 0, 0.4);
+}
+.toast.toast--error{
+  border-left: 4px solid var(--error-color);
+ 
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+@keyframes slideIn{
+  0%{
+    transform: translateX(calc(100% + 32px));
+  }
+  50%{
+    transform: translateX(-5px);
+  }
+  80%{
+    transform: translateX(10%);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+} 
+@keyframes slideOut{
+  0%{
+    transform: translateX(40px);
+  }
+  60%{
+    transform: translateX(-40px);
+
+  }
+  100%{
+    transform: translateX(calc(100% + 32px));
+  }
+}
+/* animation scale from right to left */
+.toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+   transform-origin: left; 
+  animation: shrinkBorder 4s ease forwards;
+}
+.toast.toast--success::after{
+  background-color: var(--successs-color);
+}
+
+.toast.toast--warning::after{
+  background-color: var(--warnings-color)
+}
+.toast.toast--error::after{
+  background-color: var(--errors-color)
+}
+/* Keyframes for the shrinking border animation */
+@keyframes shrinkBorder {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
