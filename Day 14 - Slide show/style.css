@@ -1,0 +1,63 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-color: #dadada;
+  width: 100%;
+  height: 100vh; 
+}
+.container{
+  max-width: 70%;
+  margin: 40px auto 10px;
+  background-color: black;
+  height: 70vh;
+}
+.image{
+  width: 100%;
+  display: none;
+}
+.image.show{
+  display: inline;
+}
+.image img{
+  width: 100%;    /* Fit the width of the container */
+  height: 100%;   /* Fit the height of the container */
+  object-fit: cover;
+}
+
+.list__image {
+  display: flex;
+  width: 100%;
+  max-width: 70%;  /* Set a maximum width if needed */
+  margin: 0 auto;     /* Center the container */
+  justify-content: space-between; /* Distribute images evenly */
+  padding: 0;
+  overflow: hidden;
+
+}
+
+.image-wrapper {
+  flex: 1;            /* Each image takes up equal space */
+  max-width: calc((100% / 9) - 4px); /* Adjust width to account for margins */
+  height: auto;       /* Maintain aspect ratio */
+  object-fit: cover;  /* Ensure image covers its allocated space */
+  margin: 0 2px; /* 4px margin between adjacent images (2px on each side) */
+
+}
+.image-wrapper:first-child {
+  margin: 0px 2px 0px 0px; /* 4px margin between adjacent images (2px on each side) */
+}
+.image-wrapper:last-child {
+  margin: 0px 0px 0px 2px;
+}
+.image-wrapper img  {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-wrapper:active {
+  border: 2px solid red;
+}

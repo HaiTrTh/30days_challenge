@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Row</title>
+    <style>
+        /* Container for images */
+        .image-row {
+            display: flex;              /* Flexbox layout */
+            justify-content: space-between; /* Distribute images evenly */
+            max-width: 1200px;            /* Ensure the container takes up full width */
+            margin: 0 auto;             /* Center the container horizontally */
+            padding: 0;   
+                          /* Remove any default padding */
+        }
+
+        /* Style for each image */
+        .image-row img {
+            width: calc(100% / 9);      /* Each image takes up 1/9th of the container */
+            height: auto;               /* Maintain aspect ratio */
+            object-fit: cover;          /* Cover the available space in each box */
+            margin: 0;                  /* Remove default margin */
+            padding: 0;                 /* Remove any padding */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-row">
+        <img src="img1.jpeg" alt="Image 1">
+        <img src="img2.jpeg" alt="Image 2">
+        <img src="img3.jpeg" alt="Image 3">
+        <img src="img4.jpeg" alt="Image 4">
+        <img src="img5.jpeg" alt="Image 5">
+        <img src="img6.jpeg" alt="Image 6">
+        <img src="img7.jpeg" alt="Image 7">
+        <img src="img8.jpeg" alt="Image 8">
+        <img src="img9.jpeg" alt="Image 9">
+    </div>
+</body>
+</html>
