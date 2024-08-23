@@ -7,20 +7,24 @@ body{
   background-color: #dadada;
   width: 100%;
   height: 100vh; 
+  height: 3000px;
 }
 .container{
   max-width: 70%;
   margin: 40px auto 10px;
   background-color: black;
   height: 70vh;
+  position: relative;
 }
 .image{
   width: 100%;
-  display: none;
+  height: 100%;
 }
+
 .image.show{
-  display: inline;
+  display: block;
 }
+
 .image img{
   width: 100%;    /* Fit the width of the container */
   height: 100%;   /* Fit the height of the container */
@@ -35,7 +39,6 @@ body{
   justify-content: space-between; /* Distribute images evenly */
   padding: 0;
   overflow: hidden;
-
 }
 
 .image-wrapper {
@@ -60,4 +63,18 @@ body{
 
 .image-wrapper:active {
   border: 2px solid red;
+}
+
+.image__arrow{
+  font-size: 3rem;
+  color: white;
+  position: absolute; 
+  top: 45%;
+  cursor: pointer;
+}
+.image__arrow-next{
+  left: 24px;
+}
+.image__arrow-previous{
+  right: 24px;
 }
