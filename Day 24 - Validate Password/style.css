@@ -1,0 +1,68 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root{
+  --primary-color: #48735f;
+}
+
+body{
+  background-image: linear-gradient(145deg, #569377 50%, #dbede5 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.password-validate{
+}
+
+.input-validate{
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  min-width: 300px;
+  position: relative;
+}
+.btn-validate{
+  background-color:  var(--primary-color);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.password-input{
+  position: relative;
+  display: inline-block;
+}
+.password-input i{
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.password-required{
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  padding: 4px 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: lighter;
+  box-shadow: 0px 0px 8px rgba(0);
+}
+.password-required-wrap{
+  display: flex;
+  align-items: center;
+}
+.password-required-wrap i{
+  margin-right: 12px;
+}
+.password-required p{
+  padding: 10px 0px;
+  font-size: 1rem;
+}
